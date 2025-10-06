@@ -1,56 +1,16 @@
 import { motion } from 'framer-motion';
+import { experiences } from '../../data/experiences';
+import { Experience as ExperienceType } from '../../types';
+import SectionTitle from '../ui/SectionTitle';
 
 function Experience() {
-  const experiences = [
-    {
-      title: "Senior Data Engineer",
-      company: "Tech Corp",
-      period: "2020 - Present",
-      achievements: [
-        "Led team of 6 engineers building data platform serving 500+ data consumers",
-        "Architected multi-cloud data mesh architecture across AWS and GCP",
-        "Reduced data pipeline failures by 75% through improved monitoring and testing"
-      ]
-    },
-    {
-      title: "Data Engineer",
-      company: "DataTech Solutions",
-      period: "2018 - 2020",
-      achievements: [
-        "Built ETL pipelines processing 2TB+ daily from diverse sources",
-        "Optimized Spark jobs reducing processing time from 6hrs to 45min",
-        "Implemented CI/CD for data pipelines using GitLab and Airflow"
-      ]
-    },
-    {
-      title: "Junior Data Engineer",
-      company: "Analytics Inc",
-      period: "2016 - 2018",
-      achievements: [
-        "Developed automated reporting system serving 200+ stakeholders",
-        "Created data models in Redshift supporting business analytics",
-        "Maintained Python-based data ingestion framework"
-      ]
-    }
-  ];
 
   return (
     <section id="experience" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#793EAB]/5 to-transparent"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Work Experience
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#793EAB] to-purple-600 mx-auto"></div>
-        </motion.div>
+        <SectionTitle>Work Experience</SectionTitle>
 
         <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
@@ -62,11 +22,7 @@ function Experience() {
   );
 }
 
-interface ExperienceCardProps {
-  title: string;
-  company: string;
-  period: string;
-  achievements: string[];
+interface ExperienceCardProps extends ExperienceType {
   delay: number;
 }
 
