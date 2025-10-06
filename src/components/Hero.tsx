@@ -23,7 +23,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
-            Senior Data Engineer
+            Micaela Callahuanca
           </motion.h1>
 
           <motion.p
@@ -32,7 +32,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto"
           >
-            Building scalable data infrastructure & pipelines that process billions of events daily
+            Data Engineer with background in SEO and Digital Marketing
           </motion.p>
 
           <motion.div
