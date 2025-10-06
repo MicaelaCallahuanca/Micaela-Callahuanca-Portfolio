@@ -1,14 +1,55 @@
+import { Database, Cloud, Code2, Server, Workflow, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { skills } from '../../data/skills';
-import { Skill } from '../../types';
-import SectionTitle from '../ui/SectionTitle';
 
 function Skills() {
+  const skills = [
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Data Warehousing",
+      items: ["Snowflake", "BigQuery", "Redshift", "Databricks"]
+    },
+    {
+      icon: <Workflow className="w-8 h-8" />,
+      title: "Data Pipeline",
+      items: ["Apache Airflow", "dbt", "Apache Spark", "Kafka"]
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Platforms",
+      items: ["AWS", "GCP", "Azure", "Terraform"]
+    },
+    {
+      icon: <Code2 className="w-8 h-8" />,
+      title: "Programming",
+      items: ["Python", "SQL", "Scala", "Java"]
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: "Big Data",
+      items: ["Hadoop", "Spark", "Flink", "Presto"]
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Data Quality",
+      items: ["Great Expectations", "Monte Carlo", "dbt tests"]
+    }
+  ];
 
   return (
     <section id="skills" className="py-24 relative">
       <div className="container mx-auto px-6 relative z-10">
-        <SectionTitle>Technical Skills</SectionTitle>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Technical Skills
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#793EAB] to-purple-600 mx-auto"></div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
@@ -20,7 +61,10 @@ function Skills() {
   );
 }
 
-interface SkillCardProps extends Skill {
+interface SkillCardProps {
+  icon: React.ReactNode;
+  title: string;
+  items: string[];
   delay: number;
 }
 

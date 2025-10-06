@@ -95,7 +95,7 @@ function Contact() {
           className="border-t border-[#793EAB]/20 pt-8"
         >
           <p className="text-gray-400">
-            © 2025 Micaela Callahuanca.
+            © 2025 Micaela Callahuanca Portfolio.
           </p>
         </motion.div>
       </footer>

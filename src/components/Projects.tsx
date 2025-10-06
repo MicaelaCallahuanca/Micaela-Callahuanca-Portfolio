@@ -1,16 +1,51 @@
 import { GitBranch } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { projects } from '../../data/projects';
-import { Project } from '../../types';
-import SectionTitle from '../ui/SectionTitle';
 
 function Projects() {
+  const projects = [
+    {
+      title: "Real-Time Analytics Platform",
+      description: "Built a real-time data processing system using Kafka, Flink, and ClickHouse handling 5M events/sec with sub-second latency for business intelligence dashboards.",
+      technologies: ["Apache Kafka", "Flink", "ClickHouse", "Kubernetes"],
+      metrics: ["5M events/sec", "99.99% uptime", "300ms p95 latency"]
+    },
+    {
+      title: "Enterprise Data Lake Migration",
+      description: "Led migration of legacy data warehouse to cloud-native data lake architecture on AWS, reducing infrastructure costs by 60% and improving query performance by 10x.",
+      technologies: ["AWS S3", "Glue", "Athena", "Redshift Spectrum"],
+      metrics: ["60% cost reduction", "10x faster queries", "50TB migrated"]
+    },
+    {
+      title: "ML Feature Store",
+      description: "Designed and implemented a centralized feature store enabling data scientists to discover, share, and serve ML features with consistent definitions across 20+ models.",
+      technologies: ["Feast", "Snowflake", "Redis", "Python"],
+      metrics: ["20+ models", "95% reusability", "2hr to production"]
+    },
+    {
+      title: "Data Quality Framework",
+      description: "Created automated data quality monitoring system with custom validators, alerting, and self-healing capabilities, reducing data incidents by 85%.",
+      technologies: ["Great Expectations", "Airflow", "dbt", "Slack API"],
+      metrics: ["85% fewer incidents", "100+ checks", "Auto-remediation"]
+    }
+  ];
+
   return (
     <section id="projects" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#793EAB]/5 to-transparent"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <SectionTitle>Featured Projects</SectionTitle>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Featured Projects
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#793EAB] to-purple-600 mx-auto"></div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
@@ -22,7 +57,11 @@ function Projects() {
   );
 }
 
-interface ProjectCardProps extends Project {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  technologies: string[];
+  metrics: string[];
   delay: number;
 }
 
