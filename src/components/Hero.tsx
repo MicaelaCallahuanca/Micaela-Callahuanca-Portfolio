@@ -66,8 +66,8 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex justify-center gap-6 mt-12"
           >
-            <SocialLink href="https://github.com" icon={<Github className="w-6 h-6" />} />
-            <SocialLink href="https://linkedin.com" icon={<Linkedin className="w-6 h-6" />} />
+            <SocialLink href="https://github.com/MicaelaCallahuanca" icon={<Github className="w-6 h-6" />} />
+            <SocialLink href="https://www.linkedin.com/in/micaelacallahuanca/" icon={<Linkedin className="w-6 h-6" />} />
           </motion.div>
         </div>
       </div>
