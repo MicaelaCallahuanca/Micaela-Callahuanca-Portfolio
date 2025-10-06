@@ -64,7 +64,7 @@ function Contact() {
               <motion.a
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href="mailto:contact@example.com"
+                href="mailto:micaelacallahuanca77@gmail.com"
                 className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#793EAB] to-purple-600 text-white rounded-xl font-semibold shadow-lg shadow-[#793EAB]/50 hover:shadow-xl hover:shadow-[#793EAB]/60 transition-all"
               >
                 <Mail className="w-5 h-5" />
@@ -73,7 +73,7 @@ function Contact() {
               <motion.a
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/micaelacallahuanca/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-8 py-4 bg-white/10 text-white border border-[#793EAB]/30 rounded-xl font-semibold hover:bg-white/20 hover:border-[#793EAB]/50 transition-all"
@@ -95,7 +95,7 @@ function Contact() {
           className="border-t border-[#793EAB]/20 pt-8"
         >
           <p className="text-gray-400">
-            © 2025 Senior Data Engineer Portfolio. Built with React, TypeScript & Framer Motion.
+            © 2025 Micaela Callahuanca Portfolio.
           </p>
         </motion.div>
       </footer>
