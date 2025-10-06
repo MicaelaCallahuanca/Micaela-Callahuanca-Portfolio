@@ -18,7 +18,7 @@ function Navbar() {
             <div className="w-10 h-10 bg-gradient-to-br from-[#793EAB] to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-[#793EAB]/50">
               <Database className="w-6 h-6 text-white" />
             </div>
-            <span className="text-white font-bold text-xl">Data Engineer</span>
+            <span className="text-white font-bold text-xl">MC</span>
           </motion.div>
 
           <div className="hidden md:flex items-center gap-8">
