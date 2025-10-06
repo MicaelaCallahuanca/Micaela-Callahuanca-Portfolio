@@ -38,25 +38,25 @@ function Contact() {
               <ContactInfo
                 icon={<Mail className="w-5 h-5" />}
                 label="Email"
-                value="contact@example.com"
-                href="mailto:contact@example.com"
+                value="micaelacallahuanca77@gmail.com"
+                href="mailto:micaelacallahuanca77@gmail.com"
               />
               <ContactInfo
                 icon={<Phone className="w-5 h-5" />}
                 label="Phone"
-                value="+1 (555) 123-4567"
-                href="tel:+15551234567"
+                value="+54 9 1111111111"
+                href="tel:+54 9 1111111111"
               />
               <ContactInfo
                 icon={<MapPin className="w-5 h-5" />}
                 label="Location"
-                value="San Francisco, CA"
+                value="Buenos Aires, AR"
               />
               <ContactInfo
                 icon={<Github className="w-5 h-5" />}
                 label="GitHub"
-                value="github.com/username"
-                href="https://github.com"
+                value="github.com/MicaelaCallahuanca"
+                href="https://github.com/MicaelaCallahuanca"
               />
             </div>
 
