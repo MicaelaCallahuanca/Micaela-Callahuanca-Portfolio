@@ -45,7 +45,7 @@ function Contact() {
                 icon={<Phone className="w-5 h-5" />}
                 label="Phone"
                 value="+54 9 1111111111"
-                href="tel:+54 9 1111111111"
+                href="tel:+54 9"
               />
               <ContactInfo
                 icon={<MapPin className="w-5 h-5" />}
