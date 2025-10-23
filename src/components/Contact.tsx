@@ -34,7 +34,7 @@ function Contact() {
               Feel free to reach out if you'd like to collaborate or just chat about data.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto">
               <ContactInfo
                 icon={<Mail className="w-5 h-5" />}
                 label="Email"
@@ -60,7 +60,7 @@ function Contact() {
               />
             </div>
 
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <motion.a
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
