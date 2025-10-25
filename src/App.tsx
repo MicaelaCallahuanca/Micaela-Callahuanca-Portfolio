@@ -70,10 +70,13 @@ function App() {
         <meta name="twitter:creator" content="@micaelacallahuanca" />
 
         {/* ====== GOOGLE SEARCH CONSOLE ====== */}
-        <meta
-          name="google-site-verification"
-          content="rJ_g99b0_UUVD5EpbOi7KvIm9SQeGMZ-kSGJ4uQnN9U"
-        />
+        <Helmet>
+  <meta 
+    name="google-site-verification" 
+    content="rJ_g99b0_UUVD5EpbOi7KvIm9SQeGMZ-kSGJ4uQnN9U" 
+  />
+</Helmet>
+
 
         {/* ====== GOOGLE TAG MANAGER (head) ====== */}
         <script
