@@ -21,7 +21,7 @@ function App() {
     <div className="min-h-screen bg-black">
       <Helmet>
         {/* ====== META BÁSICA ====== */}
-        <title>Micaela Callahuanca | Data Engineer & AI Engineer</title>
+        <title>Data Engineer & AI Engineer | Micaela Callahuanca</title>
         <meta
           name="description"
           content="Data Engineer y AI Engineer especializada en ingeniería de datos, automatización y analítica avanzada. Transformo datos en decisiones estratégicas."
