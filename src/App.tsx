@@ -36,7 +36,7 @@ function App() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Micaela Callahuanca | Data Engineer & AI Engineer"
+          content="Data Engineer & AI Engineer | Micaela Callahuanca"
         />
         <meta
           property="og:description"
