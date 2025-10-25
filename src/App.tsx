@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import Navbar from "./components/Navbar";
@@ -9,6 +9,14 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
 function App() {
+  // Inserta el <noscript> de Google Tag Manager justo después del body (requisito oficial de GTM)
+  useEffect(() => {
+    const noscript = document.createElement("noscript");
+    noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTTXMN9H"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+    document.body.insertBefore(noscript, document.body.firstChild);
+  }, []);
+
   return (
     <div className="min-h-screen bg-black">
       <Helmet>
@@ -62,27 +70,39 @@ function App() {
         <meta name="twitter:creator" content="@micaelacallahuanca" />
 
         {/* ====== GOOGLE SEARCH CONSOLE ====== */}
-        <meta name="google-site-verification" content="rJ_g99b0_UUVD5EpbOi7KvIm9SQeGMZ-kSGJ4uQnN9U" />
+        <meta
+          name="google-site-verification"
+          content="rJ_g99b0_UUVD5EpbOi7KvIm9SQeGMZ-kSGJ4uQnN9U"
+        />
+
+        {/* ====== GOOGLE TAG MANAGER (head) ====== */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KTTXMN9H');`,
+          }}
+        />
 
         {/* ====== GOOGLE ANALYTICS (GA4) ====== */}
-     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQYPM1KP2P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SQYPM1KP2P');
-</script>
-
-        {/* ====== GOOGLE TAG MANAGER ====== */}
-       
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KTTXMN9H');</script>
-
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-SQYPM1KP2P"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SQYPM1KP2P');
+            `,
+          }}
+        />
 
         {/* ====== JSON-LD (PERSON) ====== */}
         <script
@@ -140,6 +160,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </Helmet>
 
+      {/* ====== CONTENIDO PRINCIPAL ====== */}
       <Navbar />
       <Hero />
       <Projects />
