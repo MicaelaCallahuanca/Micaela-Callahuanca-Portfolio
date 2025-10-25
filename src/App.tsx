@@ -16,7 +16,7 @@ function App() {
         <title>Micaela Callahuanca | Data Engineer & AI Engineer</title>
         <meta
           name="description"
-          content="Portfolio profesional de Micaela Callahuanca, Data Engineer y AI Engineer especializada en ingeniería de datos, automatización y analítica avanzada. Transformo datos en decisiones estratégicas."
+          content="Data Engineer y AI Engineer especializada en ingeniería de datos, automatización y analítica avanzada. Transformo datos en decisiones estratégicas."
         />
         <meta name="robots" content="index, follow" />
         <link
