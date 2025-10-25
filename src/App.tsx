@@ -107,6 +107,22 @@ function App() {
           }}
         />
 
+        {/* ====== Hotjar ====== */}
+
+        <Helmet>
+  <script
+    type="text/javascript"
+    dangerouslySetInnerHTML={{
+      __html: `var _uxa = _uxa || [];
+      (function() {
+        var uxa = document.createElement('script'); uxa.type = 'text/javascript'; uxa.async = true;
+        uxa.src = 'https://t.contentsquare.net/uxa/4079e854ed2fb.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uxa, s);
+      })();`
+    }}
+  />
+</Helmet>
+
         {/* ====== JSON-LD (PERSON) ====== */}
         <script
           type="application/ld+json"
