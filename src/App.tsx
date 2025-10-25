@@ -62,35 +62,27 @@ function App() {
         <meta name="twitter:creator" content="@micaelacallahuanca" />
 
         {/* ====== GOOGLE SEARCH CONSOLE ====== */}
-        <meta
-          name="google-site-verification"
-          content="codigo-de-verificacion"
-        />
+        <meta name="google-site-verification" content="rJ_g99b0_UUVD5EpbOi7KvIm9SQeGMZ-kSGJ4uQnN9U" />
 
         {/* ====== GOOGLE ANALYTICS (GA4) ====== */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
-          `}
-        </script>
+     
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQYPM1KP2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SQYPM1KP2P');
+</script>
 
         {/* ====== GOOGLE TAG MANAGER ====== */}
-        <script>
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');
-          `}
-        </script>
+       
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTTXMN9H');</script>
+
 
         {/* ====== JSON-LD (PERSON) ====== */}
         <script
